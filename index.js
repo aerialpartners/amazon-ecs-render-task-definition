@@ -33,7 +33,7 @@ async function run() {
     containerDef.image = imageURI;
 
     if (command) {
-        containerDef.command = command;
+        containerDef.command = JSON.parse(command);
     }
 
     // Write out a new task definition file
