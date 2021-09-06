@@ -12,6 +12,12 @@ Inserts a container image URI into an Amazon ECS task definition JSON file, crea
 
 <!-- tocstop -->
 
+## Build
+```
+$ docker pull node:12-alpine
+$ docker run -v `pwd`:/root -w /root node:12-alpine sh -c "npm i && npm run package"
+```
+
 ## Usage
 
 To insert the image URI `amazon/amazon-ecs-sample:latest` as the image for the `web` container in the task definition file, and then deploy the edited task definition file to ECS:
